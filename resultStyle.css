@@ -1,0 +1,84 @@
+/* The Scream */
+h2{
+
+position: absolute;
+width: 147px;
+height: 29px;
+left: 548px;
+top: 522px;
+
+font-family: 'Montserrat';
+font-style: italic;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+}
+
+/* Edvard Munch, 1889, Proto-Expressionism */
+
+h3{
+position: absolute;
+width: 309px;
+height: 59px;
+left: 549px;
+top: 551px;
+
+font-family: 'Montserrat';
+font-style: italic;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+text-decoration-line: underline;
+
+color: #000000;
+
+}
+
+/* Your Spotify Gallery Piece: */
+
+h1{
+position: absolute;
+width: 312px;
+height: 29px;
+left: 531px;
+top: 70px;
+
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+}
+
+/* thescream 1 */
+
+
+position: absolute;
+width: 244px;
+height: 368px;
+left: 590px;
+top: 209px;
+
+background: url(thescream.jpg);
+
+
+/* resultFrame 1 */
+
+
+position: absolute;
+width: 368px;
+height: 495px;
+left: 536px;
+top: 156px;
+
+background: url(resultFrame.png);

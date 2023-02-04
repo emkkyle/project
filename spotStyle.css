@@ -1,0 +1,95 @@
+
+ body{
+  background-color: #F5F2F2;
+ }
+
+
+/*" Welcome to Spotify Gallery"*/
+ h1{ 
+/* Welcome to your Spotify Gallery */
+
+
+position: absolute;
+width: 669px;
+height: 172px;
+left: calc(50% - 669px/2 - 147.5px);
+top: calc(50% - 172px/2 - 177px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 78px;
+
+color: #000000;
+
+margin: 25px 0px 75px;
+
+}
+
+/* a bunch of rando wors to say yay yaa bunch of rando wors to say yay yaa bunch of rando wors to say yay ya */
+h2{
+
+position: absolute;
+width: 518px;
+height: 104px;
+left: calc(50% - 518px/2 - 223px);
+top: calc(50% - 104px/2 - 11px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+margin: 25px 0px 75px;
+
+
+}
+
+
+
+
+
+/* Rectangle 1 */
+
+button {
+box-sizing: border-box;
+
+position: absolute;
+width: 276px;
+height: 73px;
+left: calc(50% - 276px/2 - 344px);
+top: calc(50% - 73px/2 + 112.5px);
+
+border: 1px solid #000000;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+
+
+}
+
+/* Lets Go */
+
+
+position: absolute;
+width: 139px;
+height: 44px;
+left: calc(50% - 139px/2 - 364.5px);
+top: calc(50% - 44px/2 + 67px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
