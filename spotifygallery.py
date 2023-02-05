@@ -151,10 +151,12 @@ def search():
 
         #print(json.dumps(final_list_values, sort_keys=True, indent=4))
         #break
-
-    #return render_template(display.html, final_list_values = final_list_values)
-    
-    return final_list_values
+    avg_val = 0
+    for val in final_list_values[track_name][1]:
+       avg_val+=val
+    avg_val = avg_val/s['total'] 
+    return render_template('resultPage.html', final_list_values = final_list_values, avg_val = avg_val)
+    #return final_list_values
 
 @app.route('/sign_out')
 def sign_out():
