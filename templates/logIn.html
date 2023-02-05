@@ -12,15 +12,21 @@
 </head>
 <body>
 
-<h1>Type in a playlist url!</h1>
 
-<h2>*Careful! We are case sensitive...*</h2>
+<img src="static/images/loginBack.jpg" alt = "background" width="1850" height="900">
 
 <div class="square"></div>
+<div class="mainOutline"></div>
 
-  <form autocomplete = "off" method = "POST" action = "/search"> 
+<div class="inputBox"></div>
+
+<h1>Type in a playlist URL!</h1>
+
+
+<form autocomplete = "off" method = "POST" action = "/search">
     <input type = "reset" value = "reset">
-    <p><input type = "text" name = "Search" id = "Search" /></p>
+ 	  <p><input type="text" id="Search" name="Search"></p>
+
     <script>
       // Get the input field
       var input = document.getElementById("Search");
@@ -36,8 +42,9 @@
         }
       });
     </script>
-    <button type = "submit" id="button" onclick="document.location='/search'">search</button>
-  </form>
+
+    <button type="submit" id = "button" onclick="document.location='/search'">search</button>
+</form>
 
 
 </body>
