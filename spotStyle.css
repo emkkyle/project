@@ -3,25 +3,27 @@
   background-color: #F5F2F2;
  }
 
-
+@font-face { font-family: Historia Beralin; src: url('HistoraBeralin-vmV9O.otf'); } 
 /*" Welcome to Spotify Gallery"*/
  h1{ 
 /* Welcome to your Spotify Gallery */
 
 
 position: absolute;
-width: 669px;
-height: 172px;
-left: calc(50% - 669px/2 - 147.5px);
-top: calc(50% - 172px/2 - 177px);
+left: 14.2%;
+right: 37.07%;
+top: 20.62%;
+bottom: 56.04%;
 
-font-family: 'Montserrat';
+font-family: 'Historia Beralin';
 font-style: normal;
 font-weight: 700;
 font-size: 64px;
 line-height: 78px;
 
 color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 margin: 25px 0px 75px;
 
@@ -31,10 +33,10 @@ margin: 25px 0px 75px;
 h2{
 
 position: absolute;
-width: 518px;
-height: 104px;
-left: calc(50% - 518px/2 - 223px);
-top: calc(50% - 104px/2 - 11px);
+left: 14.2%;
+right: 48.07%;
+top: 47.76%;
+bottom: 38.13%;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -53,23 +55,28 @@ margin: 25px 0px 75px;
 
 
 
-/* Rectangle 1 */
+/* connect spotify  */
 
 button {
 box-sizing: border-box;
 
 position: absolute;
-width: 276px;
-height: 73px;
-left: calc(50% - 276px/2 - 344px);
-top: calc(50% - 73px/2 + 112.5px);
+left: 14.2%;
+right: 65.7%;
+top: 69.62%;
+bottom: 23.47%;
 
 border: 1px solid #000000;
+
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
-font-size: 36px;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
 
 
 }
