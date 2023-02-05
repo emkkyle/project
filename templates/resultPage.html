@@ -3,7 +3,7 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link rel="stylesheet" href="resultStyle.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resultStyle.css') }}">
 <title>Result Page</title>
 </head>
 
@@ -23,7 +23,7 @@
     <h1>Your Spotify Gallery is:</h1>
 
 
-    <img src="resultFrame.png" alt = "Frame" style="position: absolute;
+    <img src="static/images/resultFrame.png" alt = "Frame" style="position: absolute;
 		width: 301px;
 		height: 405px;
 		left: 536px;

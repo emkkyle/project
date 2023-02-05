@@ -80,23 +80,3 @@ color: #000000;
 
 
 }
-
-/* Lets Go */
-
-
-position: absolute;
-width: 139px;
-height: 44px;
-left: calc(50% - 139px/2 - 364.5px);
-top: calc(50% - 44px/2 + 67px);
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 36px;
-line-height: 44px;
-/* identical to box height */
-
-
-color: #000000;
-

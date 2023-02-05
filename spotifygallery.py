@@ -30,10 +30,11 @@ auth_manager = spotipy.oauth2.SpotifyOAuth(redirect_uri='http://localhost:8888/c
                                            cache_handler=cache_handler,
                                            show_dialog=True)
 
-@app.route('/')
+
+@app.route('/', methods=['POST', 'GET'])
 def index():
-    render_template("index.html")
-    return redirect("/signin")
+    return render_template("index.html")
+    #return redirect("/signin")
 
 @app.route('/signin', methods = ['POST', 'GET'])
 def signin():
@@ -44,8 +45,8 @@ def signin():
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         # Step 1. Display sign in link when no token
         auth_url = auth_manager.get_authorize_url()
-        #return render_template("logIn.html", auth_url = auth_url)
-        return f'<h2><a href="{auth_url}">Sign in</a></h2>'
+        return render_template("logIn.html", auth_url = auth_url)
+        #return f'<h2><a href="{auth_url}">Sign in</a></h2>'
 
     sp = spotipy.Spotify(auth_manager=auth_manager)
     return redirect('/result')
@@ -135,7 +136,7 @@ def search():
 
             final_list_values[track_name] = items_list
 
-        print(json.dumps(final_list_values, sort_keys=True, indent=4))
+        #print(json.dumps(final_list_values, sort_keys=True, indent=4))
         break
 
     #print(result)
@@ -186,7 +187,7 @@ def current_user():
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect('/')
     spotify = spotipy.Spotify(auth_manager=auth_manager)
-    return spotify.current_user()
+    return spotify.current_user()    
 
 if __name__=="__main__":
     app.run(threaded=True, port=8888)

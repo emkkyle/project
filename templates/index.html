@@ -5,7 +5,7 @@
 
   	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   	
-	<link rel="stylesheet" href="spotStyle.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/spotStyle.css') }}">
     <title>Spotify Gallery</title>
   </head>
 
@@ -14,7 +14,7 @@
 
     <h1>Welcome to your Spotify Gallery</h1>
 
-    <img src="spotify.svg" alt="Spotify logo" style="position: absolute;
+    <img src="static/images/spotify.svg" alt="Spotify logo" style="position: absolute;
 width: 42px;
 height: 39px;
 left: 105px;
@@ -24,14 +24,14 @@ top: 175px;
 
     <h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum mollis nisl, sit amet interdum nunc bibendum et. </h2>
 
-    <img src="thekiss.png" alt = "The Kiss" style="position: absolute;width: 419px;height: 557px;left: calc(50% - 338px/2 + 333px);top: calc(50% - 423px/2 - 40.5px);">
+    <img src="static/images/thekiss.png" alt = "The Kiss" style="position: absolute;width: 419px;height: 557px;left: calc(50% - 338px/2 + 333px);top: calc(50% - 423px/2 - 40.5px);">
 
     
 
     <form>
      
 
-      <button type="button" onclick="document.location='logIn.html'">Connect <span style="color:#1ED760">Spotify</span></button>
+      <button type="button" onclick="document.location='/signin'">Connect <span style="color:#1ED760">Spotify</span></button>
     </form>
 
 
