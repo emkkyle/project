@@ -66,7 +66,7 @@ def search():
         
     playlist_id = form_data.getlist('Search')[0].replace(
         "https://open.spotify.com/playlist/", "spotify:playlist:").split("?", 1)[0]
-    print(playlist_id)
+    #print(playlist_id)
 
     cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
     auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler)
@@ -81,7 +81,7 @@ def search():
                             fields='items.track.name,items.track.id,items.track.album.images,items.track.artists,total', limit=20, offset=0, additional_types=['track'])
     
     final_list_values = {}
-        
+    total = res['total']
     for s in res['items']:
         R = 0
         G = 0
@@ -152,11 +152,12 @@ def search():
         #print(json.dumps(final_list_values, sort_keys=True, indent=4))
         #break
     avg_val = 0
-    for val in final_list_values[track_name][1]:
-       avg_val+=val
-    avg_val = avg_val/s['total'] 
-    return render_template('resultPage.html', final_list_values = final_list_values, avg_val = avg_val)
-    #return final_list_values
+    for val in final_list_values:
+        avg_val+=final_list_values[val][1]
+    avg_val = round(avg_val/total)
+    print(avg_val)
+    #return render_template('resultPage.html', final_list_values = final_list_values, avg_val = avg_val)
+    return final_list_values
 
 @app.route('/sign_out')
 def sign_out():

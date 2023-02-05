@@ -1,6 +1,6 @@
-artTitle,r,g,b,address,description
-La Douleur,128,128,128,https://artincontext.org/wp-content/uploads/2022/10/Sad-Paintings.jpg,"Paul Cézanne, 1868-1869"
-Inconsolable Grief,255,165,0,https://artincontext.org/wp-content/uploads/2022/10/Sad-Artwork.jpg,"Ivan Kramskoi, 1884"
-At Eternity's Gate,100,149,237,https://artincontext.org/wp-content/uploads/2022/10/Famous-Sad-Art.jpg,"Vincent can Gogh, 1890"
-The Old Guitarist,0,0,205,https://uploads2.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg,"Pablo Picasso, 1904"
-Anxiety,255,0,0,http://lh3.googleusercontent.com/LpzsDw5nxjuaZu5rAaV8GSyaPQXQTYRtltFPDzVrLRXeynZqsM8dMH6tc5Ygx47UWjk=s1200,"Edvard Munch, 1894"
+id,artTitle,r,g,b,address,description
+0,La Douleur,128,128,128,https://artincontext.org/wp-content/uploads/2022/10/Sad-Paintings.jpg, "Paul Cézanne, 1868-1869"
+1,Inconsolable Grief,255,165,0,https://artincontext.org/wp-content/uploads/2022/10/Sad-Artwork.jpg, "Ivan Kramskoi, 1884"
+2,At Eternity's Gate,100,149,237,https://artincontext.org/wp-content/uploads/2022/10/Famous-Sad-Art.jpg, "Vincent can Gogh, 1890"
+3,The Old Guitarist,0,0,205,https://uploads2.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg, "Pablo Picasso, 1904"
+4,Anxiety,255,0,0,http://lh3.googleusercontent.com/LpzsDw5nxjuaZu5rAaV8GSyaPQXQTYRtltFPDzVrLRXeynZqsM8dMH6tc5Ygx47UWjk=s1200, "Edvard Munch, 1894"
