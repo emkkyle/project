@@ -1,5 +1,4 @@
-
- body{
+body{
   background-color: #F5F2F2;
  }
 
@@ -47,11 +46,23 @@ line-height: 29px;
 color: #000000;
 
 margin: 25px 0px 75px;
+ 
 
 
 }
+/*gold frame*/
 
+.square{
 
+position: absolute;
+width: 1278px;
+height: 611px;
+left: 48px;
+top: 50px;
+
+border: 3px solid #D8B447;
+
+}
 
 
 
@@ -59,6 +70,7 @@ margin: 25px 0px 75px;
 
 button {
 box-sizing: border-box;
+
 
 position: absolute;
 left: 14.2%;
