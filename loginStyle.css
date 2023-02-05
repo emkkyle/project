@@ -1,0 +1,140 @@
+/*SEARCH PAGE*/
+ body{
+  
+  position: relative;
+width: 1373px;
+height: 737px;
+
+background: #F5F2F2;
+ }
+
+@font-face { font-family: Historia Beralin; src: url('HistoraBeralin-vmV9O.otf'); } 
+
+/* Type in playlist URL! */
+h1{
+
+position: absolute;
+left: 35.62%;
+right: 35.62%;
+top: 17.34%;
+bottom: 54.41%;
+
+font-family: 'Histora Beralin';
+font-style: normal;
+font-weight: 400;
+font-size: 70px;
+line-height: 82px;
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+img{
+
+position: absolute;
+left: -27.82%;
+right: -35.11%;
+top: -4.21%;
+bottom: -13.98%;
+
+background: url(loginBack.jpg);
+}
+/* green main box */
+
+.square{
+box-sizing: border-box;
+
+position: absolute;
+left: 28.48%;
+right: 28.4%;
+top: 11.26%;
+bottom: -4.34%;
+
+background: #1A512A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+
+}
+/* big white outline */
+
+.mainOutline{
+box-sizing: border-box;
+
+position: absolute;
+left: 30.37%;
+right: 30.3%;
+top: 15.06%;
+bottom: -13.98%;
+
+border: 1px solid #FFFFFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+border-radius: 10px 10px 0px 0px;
+}
+
+/* submit button */
+
+button{
+box-sizing: border-box;
+
+position: absolute;
+left: 44.79%;
+right: 44.79%;
+top: 63.23%;
+bottom: 32.02%;
+
+background: #D0E3D6;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 3px;
+
+font-family: 'Histora Beralin';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+
+
+/* input txt */
+input{
+
+position: absolute;
+left: 36.85%;
+right: 36.85%;
+top: 52.65%;
+bottom: 44.64%;
+
+background: #F5F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 3px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+.inputBox{
+position: absolute;
+left: 35.76%;
+right: 35.69%;
+top: 50.07%;
+bottom: 42.2%;
+
+background: #F5F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 3px;
+}
+/* Type in playlist URL! */

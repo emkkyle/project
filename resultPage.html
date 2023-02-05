@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="resultStyle.css">
+<title>Result Page</title>
+</head>
+
+<body>
+ 
+ <form>
+     
+    <input type="text" id="valance" placeholder="Enter valance">
+
+      <button type="button" onclick="searchArt()">Go Again!</button>
+ </form>
+
+    
+
+    <div id="results"></div>
+	<div class="frame"></div>
+    <div class = "titleSquare"></div>
+    
+    <div class="note"></div>
+
+    <h1>Your Spotify Gallery is:</h1>
+
+    <h2>The Scream</h2>
+    <h3>Edvard Munch, 1889, Proto-Expressionism"</h3>
+
+     <img src="theScream.jpeg" alt = "scream" style="position: absolute;
+
+width: 229px;
+height: 340px;
+left: 807px;
+top: 198px;">
+
+
+
+    <img src="resultFrame.png" alt = "Frame" style="position: absolute;
+width: 345px;
+height: 459px;
+left: 749px;
+top: 139px;">
+
+
+
+  
+   
+<!--
+    <script> //display art (searchArt() func)
+
+  
+      function searchArt() {
+        const valance = document.getElementById("valance").value;
+         const resultsDiv = document.getElementById("results");
+        
+        // const artTitle;
+
+        // Placeholder image URL
+       
+        //10 photo categories: rudimentary
+
+        if (valance <= .1)
+        {
+        	imageUrl = 'http://lh3.googleusercontent.com/KmZHaPb4zkfkaiG5YajF6IxTKSEk9ETsTtGM3D79FiroSB4SEQh5i1Y4i7O95uqU=s1200'; 
+        	const artTitle = 'Starry Night';
+        	document.getElementById('titleOutput').innerHTML = artTitle;
+        	const artist = 'Van Gogh';
+        	document.getElementById('artistOutput').innerHTML = artist;
+        	const date = '1900';
+        	document.getElementById('dateOutput').innerHTML = date;
+        	//starry night
+
+        }
+        else if (valance <= .2)
+        {
+        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/Mona_Lisa_By_Leonardo_Da_Vinci_large.jpg?v=1571687096'; //monalisa
+
+        	const artTitle = 'Mona Lisa';
+        	document.getElementById('titleOutput').innerHTML = artTitle;
+        	const artist = 'Davinci';
+        	document.getElementById('artistOutput').innerHTML = artist;
+        	const date = '2020';
+        	document.getElementById('dateOutput').innerHTML = date;
+        }
+        else if (valance <=.3)
+        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/The_Birth_of_Venus_by_Sandro_Botticelli_large.jpg?v=1571687187'; //birth of venus
+        else if (valance <= .4)
+        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/Girl_with_a_Pearl_Earring_by_Johannes_Vermeer_large.jpg?v=1571687229'; //girl with pearl earing
+        else if (valance <= .5)
+        	imageUrl = 'http://lh3.googleusercontent.com/7aJyS2Nd7c8oCJKmfXlmM-rnSnLMY0ykfBFOP8N3OjV6M4hbhS_NEg8tH6SJDfvl=s1200' //the kiss
+        else if (valance <= .6)
+        	imageUrl = 'http://lh3.googleusercontent.com/V0VVmEj4JUVNrEddQotAOqd5vLn2CQj1a7aYsO5cFCZXMV5Y2Eu2YfaUZx1hIbPfmg=s1200' //bau du molin...
+        else if (valance <= .7)
+        	imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg' //impression, sunset
+        else if (valance <= .8)
+        	imageUrl = 'https://uploads1.wikiart.org/images/wassily-kandinsky/composition-viii-1923.jpg' //composition 8
+        else if (valance <= .9)
+        	imageUrl = 'https://www.dailynews.lk/sites/default/files/news/2016/07/12/z_p35-christinas.jpg' //christina's word
+        else
+        	imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg' //flaming world
+
+
+        resultsDiv.innerHTML = `<img src="${imageUrl}" alt="${valance}" style ="position: absolute;width: 199px;height: 301px;left: 587px;top: 165px;">`;
+
+         
+
+      }
+    </script>
+
+    <h2 id="titleOutput"></h2>
+
+    <h3><span id="artistOutput"></span>, <span id="dateOutput"></span> </h3>
+-->
+
+</body>
+</html>
