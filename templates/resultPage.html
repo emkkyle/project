@@ -30,14 +30,17 @@
 		top: 113px;">
 
 
-    <h2>The Scream</h2>
-    <h3>Edvard Munch, 1889, Proto-Expressionism</h3>
+  
+   
 
     <script> //display art (searchArt() func)
 
+  
       function searchArt() {
         const valance = document.getElementById("valance").value;
          const resultsDiv = document.getElementById("results");
+        
+        // const artTitle;
 
         // Placeholder image URL
        
@@ -46,9 +49,12 @@
         if (valance <= .1)
         {
         	imageUrl = 'http://lh3.googleusercontent.com/KmZHaPb4zkfkaiG5YajF6IxTKSEk9ETsTtGM3D79FiroSB4SEQh5i1Y4i7O95uqU=s1200'; 
-        	artTitle = 'Starry Night';
-        	artist = 'Van Gogh';
-        	data = '1900';
+        	const artTitle = 'Starry Night';
+        	document.getElementById('titleOutput').innerHTML = artTitle;
+        	const artist = 'Van Gogh';
+        	document.getElementById('artistOutput').innerHTML = artist;
+        	const date = '1900';
+        	document.getElementById('dateOutput').innerHTML = date;
         	//starry night
 
         }
@@ -56,9 +62,12 @@
         {
         	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/Mona_Lisa_By_Leonardo_Da_Vinci_large.jpg?v=1571687096'; //monalisa
 
-        	artTitle = 'Mona Lisa';
-        	artist = 'DaVinci';
-        	data = '1900';
+        	const artTitle = 'Mona Lisa';
+        	document.getElementById('titleOutput').innerHTML = artTitle;
+        	const artist = 'Davinci';
+        	document.getElementById('artistOutput').innerHTML = artist;
+        	const date = '2020';
+        	document.getElementById('dateOutput').innerHTML = date;
         }
         else if (valance <=.3)
         	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/The_Birth_of_Venus_by_Sandro_Botticelli_large.jpg?v=1571687187'; //birth of venus
@@ -79,8 +88,15 @@
 
 
         resultsDiv.innerHTML = `<img src="${imageUrl}" alt="${valance}" style ="position: absolute;width: 199px;height: 301px;left: 587px;top: 165px;">`;
+
+         
+
       }
     </script>
+
+    <h2 id="titleOutput"></h2>
+
+    <h3><span id="artistOutput"></span>, <span id="dateOutput"></span> </h3>
 
 
 </body>
