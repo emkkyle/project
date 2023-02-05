@@ -30,120 +30,135 @@ auth_manager = spotipy.oauth2.SpotifyOAuth(redirect_uri='http://localhost:8888/c
                                            cache_handler=cache_handler,
                                            show_dialog=True)
 
-
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    return render_template("index.html")
-    #return redirect("/signin")
+    return redirect("/signin")
 
 @app.route('/signin', methods = ['POST', 'GET'])
 def signin():
+
     if request.args.get("code"):
-        auth_manager.get_access_token(request.arg.get("code"))
+        auth_manager.get_access_token(request.args.get("code"))
         return redirect('/signin')
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         # Step 1. Display sign in link when no token
         auth_url = auth_manager.get_authorize_url()
-        return render_template("logIn.html", auth_url = auth_url)
-        #return f'<h2><a href="{auth_url}">Sign in</a></h2>'
+        return render_template("index.html", auth_url = auth_url)
 
     sp = spotipy.Spotify(auth_manager=auth_manager)
     return redirect('/result')
 
-@app.route('/result')
+
+@app.route('/result', methods=['POST', 'GET'])
 def result():
-    return f'<a href="/search">search</a> | '
+    #return f'<a href="/search">search</a> | '
+    return render_template("login.html")
 
 
 @app.route('/search', methods=['POST', 'GET'])
 def search():
-    print('hi')
+    
+    if request.method == 'GET':
+        return f"cannot access data"
+    if request.method == 'POST':
+        form_data = request.form
+        
+    playlist_id = form_data.getlist('Search')[0].replace(
+        "https://open.spotify.com/playlist/", "spotify:playlist:").split("?", 1)[0]
+    print(playlist_id)
+
     cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
     auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler)
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect('/signin')
     sp = spotipy.Spotify(auth_manager=auth_manager)
-    search_str = 'sheinnovates sample playlist emily'
-    result = sp.search(search_str, type='playlist')
-    x = 0
+    #search_str = 'sheinnovates sample playlist emily'
+    #result = sp.search(search_str, type='playlist')
+    #x = 0
 
-    count = 0
+    res = sp.playlist_items(playlist_id=playlist_id,
+                            fields='items.track.name,items.track.id,items.track.album.images,items.track.artists,total', limit=20, offset=0, additional_types=['track'])
+    
     final_list_values = {}
-    for i in result['playlists']['items']:
-        if (i['name'] != search_str):
-            #print('sorry :/( we cant find your playlist. make sure you spelled everything right!')
-            continue
-        playlist_id = i['uri']
-        playlist_tracks = sp.playlist_items(
-            playlist_id, fields='items.track.name,items.track.id,items.track.album.images,items.track.artists,total', additional_types=['track'])
+        
+    for s in res['items']:
+        R = 0
+        G = 0
+        B = 0
+        pixel_count = 0
+        color_dict = {}
 
-        for s in playlist_tracks['items']:
-            R = 0
-            G = 0
-            B = 0
-            pixel_count = 0
-            color_dict = {}
+        track_name = s['track']['name']
 
-            track_name = s['track']['name']
+        # get album image url
+        images = s['track']['album']['images'][0]['url']
 
-            # get album image url
-            images = s['track']['album']['images'][0]['url']
+        # gets album image height and width (usually 640x640)
+        image_height = s['track']['album']['images'][0]['height']
+        image_width = s['track']['album']['images'][0]['width']
+        artist = ''
 
-            # gets album image height and width (usually 640x640)
-            image_height = s['track']['album']['images'][0]['height']
-            image_width = s['track']['album']['images'][0]['width']
-            artist = ''
+        a = 0
+        for arts in s['track']['artists']:
+            if (a == 0):
+                artist += arts['name']
+            else:
+                artist += ', '
+                artist += arts['name']
+            a += 1
+        track_image = io.BytesIO(urllib.request.urlopen(images).read())
+        img = Image.open(track_image)
 
-            a = 0
-            for arts in s['track']['artists']:
-                if (a == 0):
-                    artist += arts['name']
+
+        pixels = list(img.getdata())
+        for x in range(image_width):
+            for y in range(image_height):
+                try:
+                    curr = img.getpixel((x, y))
+                except IndexError:
+                    continue
+                pixel_count += 1
+                if curr in color_dict:
+                    color_dict[curr] = color_dict[curr] + 1
                 else:
-                    artist += ', '
-                    artist += arts['name']
-                a += 1
-            track_image = io.BytesIO(urllib.request.urlopen(images).read())
-            img = Image.open(track_image)
+                    color_dict[curr] = 1
+        sorted_color_dict = sorted(
+            color_dict.items(), key=lambda x: x[1], reverse=True)
 
+        one = 0
+        for key, value in sorted_color_dict:
+            if one < 1:
+                main_color_value = key
+            else:
+                break
 
-            pixels = list(img.getdata())
-            for x in range(image_width):
-                for y in range(image_height):
-                    try:
-                        curr = img.getpixel((x, y))
-                    except IndexError:
-                        continue
-                    pixel_count += 1
-                    if curr in color_dict:
-                        color_dict[curr] = color_dict[curr] + 1
-                    else:
-                        color_dict[curr] = 1
-            sorted_color_dict = sorted(
-                color_dict.items(), key=lambda x: x[1], reverse=True)
+        features = sp.audio_features(s['track']['id'])
+        valence = features[0]['valence']
+        if 0 < valence <= 0.25:
+            valence = 0
+        elif 0.25 < valence <= 0.5:
+            valence = 1
+        elif 0.5 < valence <= 0.75:
+            valence = 2
+        else:
+            valence = 3
+        
 
-            one = 0
-            for key, value in sorted_color_dict:
-                if one < 1:
-                    main_color_value = key
-                else:
-                    break
+        items_list = [main_color_value, valence, artist]
 
-            features = sp.audio_features(s['track']['id'])
-            valence = features[0]['valence']
-
-            items_list = [main_color_value, valence, artist]
-
-            final_list_values[track_name] = items_list
+        final_list_values[track_name] = items_list
 
         #print(json.dumps(final_list_values, sort_keys=True, indent=4))
-        break
+        #break
 
-    #print(result)
-    return result
+    #return render_template(display.html, final_list_values = final_list_values)
+    
+    return final_list_values
 
 @app.route('/sign_out')
 def sign_out():
+    session.clear()
     session.pop("token_info", None)
     return redirect('/')
 
@@ -153,41 +168,7 @@ def callback():
     #return render_template("selectionPage.html")
     if request.args.get("code"):
         auth_manager.get_access_token(request.args.get("code"))
-        return redirect('/signin')
-
-
-@app.route('/playlists')
-def playlists():
-    cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
-    auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler)
-    if not auth_manager.validate_token(cache_handler.get_cached_token()):
-        return redirect('/')
-
-    spotify = spotipy.Spotify(auth_manager=auth_manager)
-    return spotify.current_user_playlists()
-
-
-@app.route('/currently_playing')
-def currently_playing():
-    cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
-    auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler)
-    if not auth_manager.validate_token(cache_handler.get_cached_token()):
-        return redirect('/')
-    spotify = spotipy.Spotify(auth_manager=auth_manager)
-    track = spotify.current_user_playing_track()
-    if not track is None:
-        return track
-    return "No track currently playing."
-
-
-@app.route('/current_user')
-def current_user():
-    cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
-    auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler)
-    if not auth_manager.validate_token(cache_handler.get_cached_token()):
-        return redirect('/')
-    spotify = spotipy.Spotify(auth_manager=auth_manager)
-    return spotify.current_user()    
+        return redirect('/signin')  
 
 if __name__=="__main__":
     app.run(threaded=True, port=8888)
