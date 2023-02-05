@@ -2,16 +2,18 @@
 h2{
 
 position: absolute;
-width: 147px;
-height: 29px;
-left: 548px;
-top: 522px;
+left: 39.91%;
+right: 49.38%;
+top: 70.83%;
+bottom: 25.24%;
 
 font-family: 'Montserrat';
 font-style: italic;
 font-weight: 500;
 font-size: 24px;
 line-height: 29px;
+
+margin-bottom: 25%;
 
 color: #000000;
 
@@ -22,32 +24,31 @@ color: #000000;
 
 h3{
 position: absolute;
-width: 309px;
-height: 59px;
-left: 549px;
-top: 551px;
+left: 39.99%;
+right: 37.51%;
+top: 74.76%;
+bottom: 17.23%;
 
 font-family: 'Montserrat';
 font-style: italic;
 font-weight: 500;
 font-size: 16px;
 line-height: 20px;
-text-decoration-line: underline;
+
+margin: 100px,0px,75px;
+
 
 color: #000000;
-
 }
 
 /* Your Spotify Gallery Piece: */
 
 h1{
 position: absolute;
-width: 312px;
-height: 29px;
-left: 531px;
-top: 70px;
-
-
+left: 38.67%;
+right: 38.6%;
+top: 10.85%;
+bottom: 85.21%;
 
 font-family: 'Montserrat';
 font-style: normal;
