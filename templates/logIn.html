@@ -18,11 +18,11 @@
 
 <div class="square"></div>
 
- <form> 
- 	 <input type="text" id="playlist" name="playlist"><br>
-
-      <button type="button" onclick="document.location='resultPage.html'">search</button>
-    </form>
+ <form method = "post" action = "/"> 
+    {% if auth_url%}
+      <button type="button" onclick="document.location='/result'">log in</button>
+    {% endif %}
+  </form>
 
 
 </body>
