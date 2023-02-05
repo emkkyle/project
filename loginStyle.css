@@ -1,0 +1,93 @@
+/*SEARCH PAGE*/
+ body{
+  background-color: #F5F2F2;
+ }
+
+/*type in a playlist */
+h1{
+
+position: absolute;
+left: 38.16%;
+right: 38.16%;
+top: 24.42%;
+bottom: 69.61%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+h2{
+position: absolute;
+left: 40.64%;
+right: 40.57%;
+top: 33.65%;
+bottom: 62.55%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #000000;
+
+}
+
+.square {
+/* green outer */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 34.52%;
+right: 34.45%;
+top: 44.1%;
+bottom: 46.27%;
+
+background: rgba(26, 81, 42, 0.16);
+border-radius: 10px;}
+
+input{
+position: absolute;
+left: 36.05%;
+right: 35.98%;
+top: 46.4%;
+bottom: 48.44%;
+
+background: #F5F2F2;
+border-radius: 3px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+}
+
+button{
+
+
+box-sizing: border-box;
+
+position: absolute;
+left: 46.18%;
+right: 46.1%;
+top: 57.39%;
+bottom: 38.81%;
+
+border: 1px solid #000000;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+
+
+}
