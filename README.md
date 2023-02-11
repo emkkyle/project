@@ -15,3 +15,5 @@ SheInnovates is the University of Pittsburgh's annual women's hackathon. It is h
 
 #### About the Process
 It was both of our first hackathons. We went into Friday night thinking that we were going to put no pressure on ourselves—regardless of how our project turned out or how far through it we got, we would have had meaningful experiences at the bare minumum. Soon after we discussed this, we became fully invested in our project.
+
+Although we did not complete a fully functioning project at the end of the hackathon, we worked afterwards to complete it because we wanted to be able to showcase our final product.
