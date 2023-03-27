@@ -8,111 +8,219 @@
 </head>
 
 <body>
- 
- <form>
-      <button type="button" onclick="document.location='/result'">Go Again!</button>
 
- </form>
+<h1>Your Spotify Gallery:</h1>
 
-    
+<img id="resultImage" src ='https://uploads2.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg' width = 200px height = 300px>
 
-  <div id="results"></div>
-	<div class="frame"></div>
-    <div class = "titleSquare"></div>
-    
-    <div class="note"></div>
+<h2 id = "artTitle">The Scream</h2>
 
-    <h1>Your Spotify Gallery is:</h1>
+<h3 id = "artist">Edvard Munch, 1889, Proto-Expressionism</h3>
 
-    <h2>The Scream</h2>
-   
-    <h3>Edvard Munch, 1889, Proto-Expressionism"</h3>
+<form>
+	<button type="button" id = "button" onclick="document.location='/'">Go Again!</button>
+</form>
 
-     <img src="static/images/theScream.jpeg" alt = "scream" style="position: absolute;
+<p id="demo"></p>
+<p id="demo1"></p>
 
-width: 229px;
-height: 340px;
-left: 807px;
-top: 198px;">
+<script>
+	var valance = {{avg_val}};
+	var num = (Math.floor(Math.random()*5));
 
+	console.log(valance);
 
+	if (valance == 0){
+		if (num == 0){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://artincontext.org/wp-content/uploads/2022/10/Sad-Paintings.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "La Douleur";
+			document.getElementById("artist").innerHTML = "Paul Cézanne, 1868-1869";
+		}
+		else if (num == 1){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://artincontext.org/wp-content/uploads/2022/10/Sad-Artwork.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "Inconsolable Grief";
+			document.getElementById("artist").innerHTML = "Ivan Kramskoi, 1884";
+		}
+		else if (num == 2){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://artincontext.org/wp-content/uploads/2022/10/Famous-Sad-Art.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "At Eternity\s Gate";
+			document.getElementById("artist").innerHTML = "Vincent van Gogh, 1890";
+		}
+		else if (num == 3){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://uploads2.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "The Old Guitarist";
+			document.getElementById("artist").innerHTML = "Pablo Picasso, 1904";
+		}
+		else if (num == 4){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/anxiety.jpeg';
+			image.width = "348";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "Anxiety";
+			document.getElementById("artist").innerHTML = "Edvard Munch, 1894";
+		}
+	}
+	else if (valance == 1){
+		if (num == 0){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/1200px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "American Gothic";
+			document.getElementById("artist").innerHTML = "Grant Wood, 1930";
+		}
+		else if (num == 1){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/pearl.jpeg';
+			image.width = "382";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "Girl with a Pearl Earring";
+			document.getElementById("artist").innerHTML = "Johannes Vermeer, 1665";
 
-    <img src="static/images/resultFrame.png" alt = "Frame" style="position: absolute;
-width: 345px;
-height: 459px;
-left: 749px;
-top: 139px;">
+		}
+		else if (num == 2){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/mother.jpeg';
+			image.width = "450";
+			image.height = "397";
+				
+			document.getElementById("artTitle").innerHTML = "Whister\'s Mother";
+			document.getElementById("artist").innerHTML = "James Abbott McNeill Whistler, 1871";
+		}
+		else if (num == 3){
+		var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/nigthhawks.jpeg';
+			image.width = "450";
+			image.height = "245";
+			
+			document.getElementById("artTitle").innerHTML = "Nighthawks";
+			document.getElementById("artist").innerHTML = "Edward Hopper, 1941";
+		}
+		else if (num == 4){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "The Persistence of Memory";
+			document.getElementById("artist").innerHTML = "Salvador Dali, 1931";
+		}
+	}
+	if (valance === 2){
+		if (num === 0){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/portrait.jpeg';
+			image.width = "450";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "Portrait of Adele Bloch-Bauer I";
+			document.getElementById("artist").innerHTML = "Gustav Klimt, 1907";
+		}
+		else if (num === 1){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/1200px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg';
+			image.width = "390";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "Las Meninas";
+			document.getElementById("artist").innerHTML = "Diego Velazquez, 1656";
+		}
+		else if (num === 2){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/greatWave.jpeg';
+			image.width = "450";
+			image.height = "317";
+			
+			document.getElementById("artTitle").innerHTML = "The Great Wave off Kanagawa";
+			document.getElementById("artist").innerHTML = "Hokusai, 1831";
+		}
+		else if (num === 3){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/Paintings40Seurat.png';
+			image.width = "450";
+			image.height = "321";
 
+			document.getElementById("artTitle").innerHTML = "A Sunday on La Grande Jatte";
+			document.getElementById("artist").innerHTML = "Georges Seurat, 1884-1886";
+		}
+		else if (num === 4){
+			var image = document.getElementById("resultImage");
+			image.src = 'https://artincontext.org/wp-content/uploads/2022/08/Famous-Paintings-at-The-Met-848x530.jpg';
+			image.width = "250";
+			image.height = "265";
 
+			document.getElementById("artTitle").innerHTML = "The Ballet Class";
+			document.getElementById("artist").innerHTML = "Edgar Degas, 1874";
+		}
 
-  
-   
-<!--
-    <script> //display art (searchArt() func)
+	}
+	else if (valance == 3){
+		if (num == 0){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/The-Kiss.jpeg';
+			image.width = "450";
+			image.height = "450";
+			
+			document.getElementById("artTitle").innerHTML = "The Kiss";
+			document.getElementById("artist").innerHTML = "Gustav Klimt, 1907-1908";
+		}
+		else if (num == 1){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/creationOfAdam.jpeg';
+			image.width = "450";
+			image.height = "272";
+			
+			document.getElementById("artTitle").innerHTML = "The Creation of Adam";
+			document.getElementById("artist").innerHTML = "Michelangelo, 1508-1512";
+		}
+		else if (num == 2){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/impressionSunrise.jpeg';
+			image.width = "450";
+			image.height = "253";
+			
+			document.getElementById("artTitle").innerHTML = "Impression, Sunrise";
+			document.getElementById("artist").innerHTML = "Claude Monet, 1872";
+		}
+		else if (num == 3){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/The_Garden_of_earthly_delights.jpeg';
+			image.width = "450";
+			image.height = "255";
+			
+			document.getElementById("artTitle").innerHTML = "The Garden of Earthly Delights";
+			document.getElementById("artist").innerHTML = "Hieronymus Bosch, 1490-1510";
+		}
+		else if (num == 4){
+			var image = document.getElementById("resultImage");
+			image.src = 'static/images/resultImages/luncheon.jpeg';
+			image.width = "450";
+			image.height = "330";
+			
+			document.getElementById("artTitle").innerHTML = "Luncheon of the Boating Party";
+			document.getElementById("artist").innerHTML = "Pierre-Auguste Renior, 1882";
+		}
+	}
 
-  
-      function searchArt() {
-        const valance = document.getElementById("valance").value;
-         const resultsDiv = document.getElementById("results");
-        
-        // const artTitle;
-
-        // Placeholder image URL
-       
-        //10 photo categories: rudimentary
-
-        if (valance <= .1)
-        {
-        	imageUrl = 'http://lh3.googleusercontent.com/KmZHaPb4zkfkaiG5YajF6IxTKSEk9ETsTtGM3D79FiroSB4SEQh5i1Y4i7O95uqU=s1200'; 
-        	const artTitle = 'Starry Night';
-        	document.getElementById('titleOutput').innerHTML = artTitle;
-        	const artist = 'Van Gogh';
-        	document.getElementById('artistOutput').innerHTML = artist;
-        	const date = '1900';
-        	document.getElementById('dateOutput').innerHTML = date;
-        	//starry night
-
-        }
-        else if (valance <= .2)
-        {
-        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/Mona_Lisa_By_Leonardo_Da_Vinci_large.jpg?v=1571687096'; //monalisa
-
-        	const artTitle = 'Mona Lisa';
-        	document.getElementById('titleOutput').innerHTML = artTitle;
-        	const artist = 'Davinci';
-        	document.getElementById('artistOutput').innerHTML = artist;
-        	const date = '2020';
-        	document.getElementById('dateOutput').innerHTML = date;
-        }
-        else if (valance <=.3)
-        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/The_Birth_of_Venus_by_Sandro_Botticelli_large.jpg?v=1571687187'; //birth of venus
-        else if (valance <= .4)
-        	imageUrl = 'https://cdn.shopify.com/s/files/1/1771/4067/files/Girl_with_a_Pearl_Earring_by_Johannes_Vermeer_large.jpg?v=1571687229'; //girl with pearl earing
-        else if (valance <= .5)
-        	imageUrl = 'http://lh3.googleusercontent.com/7aJyS2Nd7c8oCJKmfXlmM-rnSnLMY0ykfBFOP8N3OjV6M4hbhS_NEg8tH6SJDfvl=s1200' //the kiss
-        else if (valance <= .6)
-        	imageUrl = 'http://lh3.googleusercontent.com/V0VVmEj4JUVNrEddQotAOqd5vLn2CQj1a7aYsO5cFCZXMV5Y2Eu2YfaUZx1hIbPfmg=s1200' //bau du molin...
-        else if (valance <= .7)
-        	imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg' //impression, sunset
-        else if (valance <= .8)
-        	imageUrl = 'https://uploads1.wikiart.org/images/wassily-kandinsky/composition-viii-1923.jpg' //composition 8
-        else if (valance <= .9)
-        	imageUrl = 'https://www.dailynews.lk/sites/default/files/news/2016/07/12/z_p35-christinas.jpg' //christina's word
-        else
-        	imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Flaming_June%2C_by_Frederic_Lord_Leighton_%281830-1896%29.jpg' //flaming world
-
-
-        resultsDiv.innerHTML = `<img src="${imageUrl}" alt="${valance}" style ="position: absolute;width: 199px;height: 301px;left: 587px;top: 165px;">`;
-
-         
-
-      }
-    </script>
-
-    <h2 id="titleOutput"></h2>
-
-    <h3><span id="artistOutput"></span>, <span id="dateOutput"></span> </h3>
--->
-
+</script>
 </body>
 </html>

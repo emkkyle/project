@@ -3,7 +3,7 @@
 <html>
 <head>
 
-<title>searchPage</title>
+<title>Search</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -22,28 +22,30 @@
 
 <h1>Type in a playlist URL!</h1>
 
+<h4>This may take a few moments to load.</h4>
+
 
 <form autocomplete = "off" method = "POST" action = "/search">
-    <input type = "reset" value = "reset">
- 	  <p><input type="text" id="Search" name="Search"></p>
+	<input type = "reset" value = "reset">
+	<p><input type="text" id="Search" name="Search"></p>
 
-    <script>
-      // Get the input field
-      var input = document.getElementById("Search");
+	<script>
+	// Get the input field
+	var input = document.getElementById("Search");
 
-      // Execute a function when the user presses a key on the keyboard
-      input.addEventListener("keypress", function(event) {
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-          // Cancel the default action, if needed
-          event.preventDefault();
-          // Trigger the button element with a click
-          document.getElementById("button").click();
-        }
-      });
-    </script>
+	// Execute a function when the user presses a key on the keyboard
+	input.addEventListener("keypress", function(event) {
+		// If the user presses the "Enter" key on the keyboard
+		if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault();
+		// Trigger the button element with a click
+		document.getElementById("button").click();
+		}
+	});
+	</script>
 
-    <button type="submit" id = "button" onclick="document.location='/search'">search</button>
+	<button type="submit" id = "button" onclick="document.location='/search'">search</button>
 </form>
 
 

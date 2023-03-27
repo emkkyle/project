@@ -110,7 +110,6 @@ def search():
         track_image = io.BytesIO(urllib.request.urlopen(images).read())
         img = Image.open(track_image)
 
-
         pixels = list(img.getdata())
         for x in range(image_width):
             for y in range(image_height):
@@ -144,7 +143,6 @@ def search():
         else:
             valence = 3
         
-
         items_list = [main_color_value, valence, artist]
 
         final_list_values[track_name] = items_list
@@ -156,8 +154,8 @@ def search():
         avg_val+=final_list_values[val][1]
     avg_val = round(avg_val/total)
     print(avg_val)
-    #return render_template('resultPage.html', final_list_values = final_list_values, avg_val = avg_val)
-    return final_list_values
+    return render_template('resultPage.html', final_list_values = final_list_values, avg_val = avg_val)
+    #return final_list_values
 
 @app.route('/sign_out')
 def sign_out():

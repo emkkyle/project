@@ -13,36 +13,49 @@
 /* note */
 
 .note{
-position: absolute;
-left: 13.91%;
-right: 56.52%;
-top: 35.55%;
-bottom: 35.55%;
+    position: absolute;
+    left: 13.91%;
+    right: 56.52%;
+    top: 35.55%;
+    bottom: 35.55%;
 
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
 
 }
+
+/*spotify gallery*/
+h1 {
+
+    font-family: 'Histora Beralin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    /* identical to box height */
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* The Scream */
+h2 {
+    position: absolute;
+    left: 15%;
+    right: 50%;
+    top: 25%;
+    bottom: 55%;
 
-h2{
-position: absolute;
-left: 16.24%;
-right: 67.15%;
-top: 36.35%;
-bottom: 53.73%;
+    font-family: 'Histora Beralin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 51px;
+    /* identical to box height */
 
-font-family: 'Histora Beralin';
-font-style: normal;
-font-weight: 400;
-font-size: 43px;
-line-height: 51px;
-/* identical to box height */
+    color: #000000;
 
-
-color: #000000;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 }
@@ -50,91 +63,107 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 /* Edvard Munch, 1889, Proto-Expressionism */
 
 h3{
-position: absolute;
-left: 16.24%;
-right: 58.85%;
-top: 47.49%;
-bottom: 44.64%;
+    position: absolute;
+    left: 16.24%;
+    right: 58.85%;
+    top: 47.49%;
+    bottom: 44.64%;
 
-font-family: 'Montserrat';
-font-style: italic;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-decoration-line: underline;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
 
-color: #000000;
+    color: #000000;
 
 }
 
 /* gold frame */
 
 .frame{
-position: absolute;
-width: 1278px;
-height: 575px;
-left: 48px;
-top: 81px;
+    position: absolute;
+    width: 90%;
+    height: 78%;
+    left: 5%;
+    top: 10%;
 
-border: 3px solid #D8B447;
+    border: 3px solid #D8B447;
 
 }
+
+#resultImage {
+    position: absolute;
+    left: 60%;
+    right: 20%;
+    top: 20%;
+    bottom: 20%;
+}
+
+#resultFrame {
+    position: absolute;
+    left: 60%;
+    right: 20%;
+    top: 20%;
+    bottom: 20%;
+}
+
 /* title frame */
 
 .titleSquare{
-position: absolute;
-left: 32.89%;
-right: 36.89%;
-top: 6.51%;
-bottom: 80.7%;
+    position: absolute;
+    left: 32.89%;
+    right: 36.89%;
+    top: 6.51%;
+    bottom: 80.7%;
 
-background: #F5F2F2;
+    background: #F5F2F2;
 }
 
 /* Your Spotify Gallery Piece: */
 
 h1{
-position: absolute;
-left: 36.71%;
-right: 36.64%;
-top: 8.55%;
-bottom: 86.7%;
+    position: absolute;
+    top: 8.55%;
+    left: 37%;
+    bottom: 86.7%;
 
-font-family: 'Histora Beralin';
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 35px;
+    font-family: 'Histora Beralin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 35px;
 
-color: #373A52;
+    color: #373A52;
 
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 /* go again button frame */
 
 button{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-left: 35.11%;
-right: 56.52%;
-top: 68.25%;
-bottom: 27%;
+    position: absolute;
+    left: 35.11%;
+    right: 56.52%;
+    top: 68.25%;
+    bottom: 27%;
 
-border: 1px solid #000000;
-border-radius: 6px;
-
-
-/* go again button */
+    border: 1px solid #000000;
+    border-radius: 6px;
 
 
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
+    /* go again button */
 
 
-color: #000000;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+
+    color: #000000;
 }
